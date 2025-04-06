@@ -2,7 +2,7 @@ import { HiOutlineArrowUpCircle } from "react-icons/hi2";
 
 const BackToTop = () => {
   const scrollToSection = () => {
-    const section = document.getElementById("info");
+    const section = document.getElementById("navbar");
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",

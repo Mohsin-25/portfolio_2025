@@ -17,12 +17,12 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[500vh]">
-      <p>Skills</p>
+    <section ref={targetRef} className="px-32 relative h-[400vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <h1 className="text-6xl absolute top-[60px]">Skills</h1>
         <motion.div style={{ x }} className="flex gap-8">
           {techStack.map((card, index) => {
             return <Card card={card} key={index} />;

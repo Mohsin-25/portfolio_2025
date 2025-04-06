@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between p-4 z-10000">
+    <div className="flex justify-between p-4 z-10000" id="navbar">
       <div className="flex">
         <PopRevealAnimation delay={0.35}>
           <div className="animate-asd  px-2 mx-2 cursor-pointer hover:text-[#00FF7F] hover:scale-110 ease-in-out ">

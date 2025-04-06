@@ -5,6 +5,8 @@
 
 body {
   color: #dcd7c9;
+  background-color: #030303;
+  font-family: cursive;
 }
 
 .page {
@@ -13,11 +15,16 @@ body {
   /* color: #f7f7f7; */
   margin: auto;
   display: flex;
-  background-color: #030303;
+  padding: 64px 128px 0 128px;
   /* overscroll-behavior: contain; */
 
   /* justify-content: center;
   align-items: center; */
+  h1 {
+    font-size: 64px;
+    margin-bottom: 64px;
+    font-weight: 500;
+  }
 }
 .info {
   font-family: cursive;
