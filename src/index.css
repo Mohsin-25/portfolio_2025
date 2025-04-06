@@ -6,7 +6,7 @@
 body {
   color: #dcd7c9;
   background-color: #030303;
-  font-family: cursive;
+  /* font-family: cursive; */
 }
 
 .page {
@@ -25,9 +25,6 @@ body {
     margin-bottom: 64px;
     font-weight: 500;
   }
-}
-.info {
-  font-family: cursive;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

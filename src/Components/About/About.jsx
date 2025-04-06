@@ -37,11 +37,7 @@ const About = () => {
           </div>
           <div className="flex-1/2 flex justify-center -mt-[128px]">
             <RevealAnimation>
-              <img
-                src={"public/profile.png"}
-                alt=""
-                className="h-[50vh] ml-auto"
-              />
+              <img src="/profile.png" alt="" className="h-[50vh] ml-auto" />
             </RevealAnimation>
           </div>
           <div>{/* img */}</div>
