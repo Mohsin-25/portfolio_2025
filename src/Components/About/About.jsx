@@ -30,8 +30,8 @@ const About = () => {
             </RevealAnimation>
             <RevealAnimation>
               <motion.p>
-                Whether it’s a sleek landing page or a dynamic dashboard, I aim
-                to create work that feels good to use.
+                Whether it's a sleek landing page or a dynamic forms, I aim to
+                create work that feels good to use.
               </motion.p>
             </RevealAnimation>
           </div>
