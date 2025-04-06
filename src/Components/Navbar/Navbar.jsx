@@ -1,19 +1,8 @@
 import React from "react";
-import RevealAnimation from "../Utils/Animation/RevealAnimation";
-import { SparklesCore } from "../Utils/Logo/Logo";
 import PopRevealAnimation from "../Utils/Animation/PopRevealAnimation";
+import { navbarItems } from "../Utils/Other/constants";
 
 const Navbar = () => {
-  const navbarItems = [
-    "About",
-    "Skills",
-    "Experience",
-    "Projects",
-    "Recommendation",
-    "Contact",
-    "Download CV",
-  ];
-
   const scrollToSection = (item) => {
     const section = document.getElementById(item?.toLowerCase());
     if (section) {
