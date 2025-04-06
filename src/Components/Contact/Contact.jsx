@@ -1,9 +1,13 @@
 import React from "react";
+import RevealAnimation from "../Utils/Animation/RevealAnimation";
+import { motion } from "motion/react";
 
 const Contact = () => {
   return (
     <section className="page" id="contact">
-      <h1>Contact</h1>
+      <RevealAnimation>
+        <motion.h1>Contact</motion.h1>
+      </RevealAnimation>
     </section>
   );
 };

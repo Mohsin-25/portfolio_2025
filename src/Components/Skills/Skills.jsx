@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import RevealAnimation from "../Utils/Animation/RevealAnimation";
 
 const Skills = () => {
   return (
@@ -22,7 +23,9 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="px-32 relative h-[400vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        {/* <RevealAnimation> */}
         <h1 className="text-6xl absolute top-[60px]">Skills</h1>
+        {/* </RevealAnimation> */}
         <motion.div style={{ x }} className="flex gap-8">
           {techStack.map((card, index) => {
             return <Card card={card} key={index} />;
