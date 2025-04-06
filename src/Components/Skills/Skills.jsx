@@ -35,7 +35,7 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[450px] w-[450px] overflow-hidden rounded-2xl bg-gray-600/30">
+    <div className="group relative h-[450px] w-[450px] overflow-hidden rounded-2xl bg-white/15">
       <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
         <p className="p-8 text-6xl">{card}</p>
