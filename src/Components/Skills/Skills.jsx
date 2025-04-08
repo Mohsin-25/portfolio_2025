@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
+import { skills } from "../Utils/Other/constants";
 
 const Skills = () => {
   return (
@@ -38,17 +39,17 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[450px] w-[600px] overflow-hidden rounded-2xl bg-white/15">
+    <div className="group relative h-[350px] w-[600px] overflow-hidden rounded-2xl bg-white/10">
       <div className="p-6 absolute inset-0 z-10 flex flex-col justify-between">
-        <div className="text-5xl flex mx-auto text-center">
-          <sapn>{card?.group}</sapn>
+        <div className="text-4xl flex mx-auto text-center">
+          <span>{card?.group}</span>
         </div>
         <div className="col-span-3 grid grid-cols-2 gap-2 text-2xl">
           {card?.skill?.map((item, index) => (
             <span
               key={index}
-              className={`bg-black px-2 py-1 rounded-md  hover:bg-black/40
-                ${item?.includes("*") && "text-black"}`}
+              className={`bg-white/10 px-2 py-1 rounded-lg border border-white/20  hover:bg-white/15
+                ${item?.includes("*") && "text-white/1"}`}
               // hover:bg-white/0 hover:text-[#00FF7F] border-[1px] border-transparent hover:border-[#00FF7F]
             >
               {item}
@@ -59,66 +60,3 @@ const Card = ({ card }) => {
     </div>
   );
 };
-
-// • Front-End : React.js, JavaScript, Reusable Components, Custom Hooks, Controlled Components.
-// • UI/UX and Styling : Tailwind CSS, Material UI, Headless UI.
-// • State Management and API Handling : Redux toolkit, TanStack Query,
-// • Form Handling : React Hook Form, Yup Validation.
-// • Version Control and Collaboration : Git, GitHub.
-
-const skills = [
-  {
-    group: "Frontend",
-    skill: [
-      "React.js",
-      "JavaScript",
-      "Reusable Components",
-      "Custom Hooks",
-      "HTML",
-      "*",
-    ],
-    color: "",
-  },
-  {
-    group: "UI/UX and Styling",
-    skill: [
-      "Tailwind CSS",
-      "Material UI",
-      "Headless UI",
-      "Styled Components",
-      ,
-      "CSS",
-      "*",
-    ],
-    color: "",
-  },
-  {
-    group: "State Management and API Handling",
-    skill: [
-      "Redux toolkit",
-      "TanStack Query",
-      "Context API",
-      "Axios",
-      "*",
-      "*",
-    ],
-    color: "",
-  },
-  {
-    group: "Form Handling",
-    skill: [
-      "React Hook Form",
-      "Yup Validation",
-      "Controlled Components",
-      "*",
-      "*",
-      "*",
-    ],
-    color: "",
-  },
-  {
-    group: "Version Control and Collaboration",
-    skill: ["Git", "GitHub", "*", "*", "*", "*"],
-    color: "",
-  },
-];
