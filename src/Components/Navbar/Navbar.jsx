@@ -54,26 +54,38 @@ const Navbar = () => {
       <ul className="flex group">
         {navbarItems?.map((item, index) => {
           return (
-            <PopRevealAnimation
-              delay={0.35 + (index + 1) / 10}
-              key={index}
-              // delay={0.35 + 0.1 + index / 5}
-            >
-              <li
-                className=" px-4 cursor-pointer hover:scale-110 ease-in-out 
-              group-hover:opacity-60 hover:opacity-100 hover:text-[#00FF7F]
-              "
-                // peer opacity-50 hover:opacity-100
-                // border-b-2 border-transparent hover:border-blue-400
-                onClick={() => {
-                  scrollToSection(item);
-                }}
+            <>
+              <PopRevealAnimation
+                delay={0.35 + (index + 1) / 10}
+                key={index}
+                // delay={0.35 + 0.1 + index / 5}
               >
-                {item}
-              </li>
-            </PopRevealAnimation>
+                <li
+                  className=" px-4 cursor-pointer hover:scale-110 ease-in-out 
+                group-hover:opacity-60 hover:opacity-100 hover:text-[#00FF7F]
+                "
+                  // peer opacity-50 hover:opacity-100
+                  // border-b-2 border-transparent hover:border-blue-400
+                  onClick={() => {
+                    scrollToSection(item);
+                  }}
+                >
+                  {item}
+                </li>
+              </PopRevealAnimation>
+            </>
           );
         })}
+        <PopRevealAnimation delay={0.35 + (navbarItems?.length + 2) / 10}>
+          <a href="./resume.pdf" download="Mohsin_Resume">
+            <li
+              className="px-4 cursor-pointer hover:scale-110 ease-in-out 
+      group-hover:opacity-60 hover:opacity-100 hover:text-[#00FF7F]"
+            >
+              Download CV
+            </li>
+          </a>
+        </PopRevealAnimation>
       </ul>
     </div>
   );

@@ -5,7 +5,7 @@ export const navbarItems = [
   // "Projects",
   "Recommendation",
   "Contact",
-  "Download CV",
+  // "Download CV",
 ];
 
 export const skills = [
