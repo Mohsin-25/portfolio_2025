@@ -23,7 +23,7 @@ const About = () => {
             </RevealAnimation>
             <RevealAnimation>
               <motion.p>
-                With 2 years of experience in React, JavaScript, and modern
+                With 2+ years of experience in React, JavaScript, and modern
                 styling tools, I build digital experiences that are fast,
                 functional, and visually sharp.
               </motion.p>

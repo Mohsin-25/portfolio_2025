@@ -1,3 +1,8 @@
+export const yearsOfExperience = (
+  (new Date() - new Date("2022-12-12")) /
+  (1000 * 60 * 60 * 24 * 365)
+).toFixed(1);
+
 export const navbarItems = [
   "About",
   "Skills",

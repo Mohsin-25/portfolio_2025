@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "motion/react";
+import { yearsOfExperience } from "../Utils/Other/constants";
 
 const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -38,32 +39,59 @@ const Timeline = ({ data }) => {
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
           I've been working in{" "}
           <span className="text-[#00FF7F]">{data?.[0]?.company}</span> for the
-          past <span className="text-[#00FF7F]">2 years</span>. Here's a
-          timeline of my journey.
+          past{" "}
+          <span className="text-[#00FF7F]">
+            {
+              // `${yearsOfExperience} years`
+              "2 years"
+            }
+          </span>
+          . Here's a timeline of my journey.
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data?.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
-          >
+          <div key={index} className="flex justify-start pt-20">
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
 
-              <h3 className="text-xl md:pl-20 md:text-5xl font-bold">
-                <span className="text-[18px]">
-                  {item.timeline.from.year} -{" "}
-                </span>{" "}
-                {item.timeline.to.year}
+              <h3 className="pl-20  font-bold flex">
+                <div>
+                  <div className="flex flex-col mt-6">
+                    <span className="text-[12x]">
+                      {item.timeline.from.year}
+                    </span>
+                    <span className="text-[12px] -mt-[6px] text-[#00FF7F]">
+                      {item.timeline.from.month}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-5xl mt-1 mx-1">{" - "}</div>
+                <div className="flex flex-col">
+                  <span className="text-5xl">{item.timeline.to.year}</span>
+                  <span className="text-[12px] -mt-[6px] text-[#00FF7F]">
+                    {item.timeline.to.month}
+                  </span>
+                </div>
               </h3>
+              {/* <h3 className="text-xl md:pl-20 md:text-5xl font-bold">
+                <span className="text-[18px]">
+                  {item.timeline.from.year}
+                  {" - "}
+                </span>
+                {item.timeline.to.year}
+              </h3> */}
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="relative w-full">
               <h3 className=" block text-4xl mb-4 text-left font-bold">
-                {item.project}
+                <span className="text-[#00FF7F]">
+                  {item.project.split("-")[0]}
+                </span>
+                <span> - </span>
+                <span>{item.project.split("-")[1]}</span>
               </h3>
               <ul className="space-y-2">
                 {item.content.map((point, index) => (
