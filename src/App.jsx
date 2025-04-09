@@ -10,6 +10,7 @@ import Skills from "./Components/Skills/Skills";
 import { BackgroundBeams } from "./Components/Utils/Animation/Meteor";
 import BackToTop from "./Components/Utils/BackToTop/BackToTop";
 import "./index.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const lenis = new Lenis({
@@ -37,6 +38,7 @@ function App() {
       <Contact />
       <BackToTop />
       {/* </TracingBeam> */}
+      <ToastContainer />
     </>
   );
 }

@@ -35,7 +35,7 @@ const Recommendation = () => {
               </motion.p>
             </RevealAnimation>
             <motion.div className="flex justify-center">
-              <RevealAnimation direction="left" className="">
+              <RevealAnimation direction="left">
                 <motion.h3 className="text-lg font-semibold text-[#39dcc5] mt-4">
                   Abhishek Shimpi
                 </motion.h3>

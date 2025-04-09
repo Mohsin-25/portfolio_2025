@@ -15,13 +15,16 @@ const About = () => {
         </RevealAnimation>
         <div className="flex gap-4">
           <div className="flex flex-col flex-1/2 text-2xl gap-6">
-            <RevealAnimation>
-              <motion.p>
-                Hey there! I'm Mohammad Mohsin👋 , a frontend developer who
-                loves turning ideas into elegant web interfaces.
-              </motion.p>
+            <RevealAnimation direction="left">
+              <motion.p>Hey there!👋</motion.p>
             </RevealAnimation>
             <RevealAnimation>
+              <motion.p>
+                I'm Mohammad Mohsin, a frontend developer who loves turning
+                ideas into elegant web interfaces.
+              </motion.p>
+            </RevealAnimation>
+            <RevealAnimation direction="left">
               <motion.p>
                 With 2+ years of experience in React, JavaScript, and modern
                 styling tools, I build digital experiences that are fast,
