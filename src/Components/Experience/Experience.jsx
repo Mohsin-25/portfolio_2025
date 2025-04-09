@@ -20,11 +20,11 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2024,
-          month: "Jan",
+          month: "January",
         },
         to: {
           year: 2025,
-          month: new Date().toLocaleString("default", { month: "short" }),
+          month: new Date().toLocaleString("default", { month: "long" }),
         },
       },
     },
@@ -40,17 +40,17 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2022,
-          month: "Dec",
+          month: "December",
         },
         to: {
           year: 2024,
-          month: "Jan",
+          month: "January",
         },
       },
     },
   ];
   return (
-    <section className="page flex-col" id="experience">
+    <section className="page flex-col h-[170vh]" id="experience">
       <RevealAnimation>
         <motion.h1>Experience</motion.h1>
       </RevealAnimation>

@@ -17,9 +17,9 @@ const Recommendation = () => {
             className="w-24 h-24 rounded-full mx-auto -mt-16 border-4 border-black"
           />
           <div className="mt-6">
-            <RevealAnimation>
+            <RevealAnimation direction="left">
               <motion.p className=" text-[16px] italic">
-                <span className="text-[#39dcc5] text-xl">“</span>I had the
+                <span className="text-[#39dcc5] text-4xl">“</span>I had the
                 pleasure of leading and mentoring Mohsin, and I've witnessed
                 firsthand his proactive mindset, dedication, and exceptional
                 problem-solving skills in React.js and front-end development.
@@ -31,15 +31,19 @@ const Recommendation = () => {
               <motion.p className=" text-[16px] italic">
                 Excited to see him grow and achieve even greater success in the
                 future
-                <span className="text-[#39dcc5] text-xl">”</span>
+                <span className="text-[#39dcc5] text-4xl">”</span>
               </motion.p>
             </RevealAnimation>
-            <h3 className="text-lg font-semibold text-[#39dcc5] mt-4">
-              Abhishek Shimpi
-            </h3>
-            <p className="text-sm text-gray-500">
-              Lead Frontend Engineer @ Fyntune Solutions
-            </p>
+            <motion.div className="flex justify-center">
+              <RevealAnimation direction="left" className="">
+                <motion.h3 className="text-lg font-semibold text-[#39dcc5] mt-4">
+                  Abhishek Shimpi
+                </motion.h3>
+                <motion.p className="text-sm text-gray-500">
+                  Lead Frontend Engineer @ Fyntune Solutions
+                </motion.p>
+              </RevealAnimation>
+            </motion.div>
           </div>
         </div>
       </div>

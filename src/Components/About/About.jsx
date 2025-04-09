@@ -17,8 +17,8 @@ const About = () => {
           <div className="flex flex-col flex-1/2 text-2xl gap-6">
             <RevealAnimation>
               <motion.p>
-                Hey there! 👋 I’m a frontend developer who loves turning ideas
-                into elegant web interfaces.
+                Hey there! I'm Mohammad Mohsin👋 , a frontend developer who
+                loves turning ideas into elegant web interfaces.
               </motion.p>
             </RevealAnimation>
             <RevealAnimation>
