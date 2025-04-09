@@ -19,7 +19,7 @@ const Recommendation = () => {
           <div className="mt-6">
             <RevealAnimation>
               <motion.p className=" text-[16px] italic">
-                <span className="text-[#00FF7F] text-xl">“</span>I had the
+                <span className="text-[#39dcc5] text-xl">“</span>I had the
                 pleasure of leading and mentoring Mohsin, and I've witnessed
                 firsthand his proactive mindset, dedication, and exceptional
                 problem-solving skills in React.js and front-end development.
@@ -31,10 +31,10 @@ const Recommendation = () => {
               <motion.p className=" text-[16px] italic">
                 Excited to see him grow and achieve even greater success in the
                 future
-                <span className="text-[#00FF7F] text-xl">”</span>
+                <span className="text-[#39dcc5] text-xl">”</span>
               </motion.p>
             </RevealAnimation>
-            <h3 className="text-lg font-semibold text-[#00FF7F] mt-4">
+            <h3 className="text-lg font-semibold text-[#39dcc5] mt-4">
               Abhishek Shimpi
             </h3>
             <p className="text-sm text-gray-500">

@@ -48,7 +48,7 @@ const RevealAnimation = ({
           duration: 0.6,
           ease: "easeIn",
         }}
-        className="absolute top-[8px] bottom-[0px] left-0 right-0 z-[20] bg-[#00FF7F]/30"
+        className="absolute top-[8px] bottom-[0px] left-0 right-0 z-[20] bg-[#39dcc5]/30"
       ></motion.div>
     </div>
   );

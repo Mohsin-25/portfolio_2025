@@ -15,7 +15,7 @@ const Info = () => {
             </RevealAnimation>
             <RevealAnimation direction="left">
               <h1 className="!mb-0">
-                <span className="text-[#00FF7F]">One Pixel</span> at a Time
+                <span className="text-[#39dcc5]">One Pixel</span> at a Time
               </h1>
             </RevealAnimation>
           </div>
@@ -23,7 +23,7 @@ const Info = () => {
             <RevealAnimation>
               <p>
                 Creating smooth, responsive, and{" "}
-                <span className="text-[#00FF7F]">user-centric</span> web
+                <span className={`text-[#39dcc5]`}>user-centric</span> web
                 applications.
               </p>{" "}
             </RevealAnimation>

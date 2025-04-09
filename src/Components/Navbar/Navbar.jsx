@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="flex justify-between p-4 z-10000" id="navbar">
       <div className="flex">
         <PopRevealAnimation delay={0.35}>
-          <div className="animate-asd  px-2 mx-2 cursor-pointer hover:text-[#00FF7F] hover:scale-110 ease-in-out ">
+          <div className="animate-asd  px-2 mx-2 cursor-pointer hover:text-[#39dcc5] hover:scale-110 ease-in-out ">
             {/* {"<Mohsin />"} */}
             <span className="lessThan">{"<"}</span>
             <span className="mr-1">{"Mohsin"}</span>
@@ -62,7 +62,7 @@ const Navbar = () => {
               >
                 <li
                   className=" px-4 cursor-pointer hover:scale-110 ease-in-out 
-                group-hover:opacity-60 hover:opacity-100 hover:text-[#00FF7F]
+                group-hover:opacity-60 hover:opacity-100 hover:text-[#39dcc5]
                 "
                   // peer opacity-50 hover:opacity-100
                   // border-b-2 border-transparent hover:border-blue-400
@@ -80,7 +80,7 @@ const Navbar = () => {
           <a href="./resume.pdf" download="Mohsin_Resume">
             <li
               className="px-4 cursor-pointer hover:scale-110 ease-in-out 
-      group-hover:opacity-60 hover:opacity-100 hover:text-[#00FF7F]"
+      group-hover:opacity-60 hover:opacity-100 hover:text-[#39dcc5]"
             >
               Download CV
             </li>

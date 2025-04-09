@@ -38,9 +38,9 @@ const Timeline = ({ data }) => {
         </h2> */}
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
           I've been working in{" "}
-          <span className="text-[#00FF7F]">{data?.[0]?.company}</span> for the
+          <span className="text-[#39dcc5]">{data?.[0]?.company}</span> for the
           past{" "}
-          <span className="text-[#00FF7F]">
+          <span className="text-[#39dcc5]">
             {
               // `${yearsOfExperience} years`
               "2 years"
@@ -63,7 +63,7 @@ const Timeline = ({ data }) => {
                     <span className="text-[12x]">
                       {item.timeline.from.year}
                     </span>
-                    <span className="text-[12px] -mt-[6px] text-[#00FF7F]">
+                    <span className="text-[12px] -mt-[6px] text-[#39dcc5]">
                       {item.timeline.from.month}
                     </span>
                   </div>
@@ -71,7 +71,7 @@ const Timeline = ({ data }) => {
                 <div className="text-5xl mt-1 mx-1">{" - "}</div>
                 <div className="flex flex-col">
                   <span className="text-5xl">{item.timeline.to.year}</span>
-                  <span className="text-[12px] -mt-[6px] text-[#00FF7F]">
+                  <span className="text-[12px] -mt-[6px] text-[#39dcc5]">
                     {item.timeline.to.month}
                   </span>
                 </div>
@@ -87,7 +87,7 @@ const Timeline = ({ data }) => {
 
             <div className="relative w-full">
               <h3 className=" block text-4xl mb-4 text-left font-bold">
-                <span className="text-[#00FF7F]">
+                <span className="text-[#39dcc5]">
                   {item.project.split("-")[0]}
                 </span>
                 <span> - </span>
