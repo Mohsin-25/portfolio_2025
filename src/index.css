@@ -9,6 +9,10 @@ body {
   /* font-family: cursive; */
 }
 
+.primary-text {
+  color: #39dcc5;
+}
+
 .page {
   min-height: 100vh;
   width: 100%;
@@ -16,12 +20,25 @@ body {
   margin: auto;
   display: flex;
   padding: 64px 128px 0 128px;
-  /* overscroll-behavior: contain; */
 
-  /* justify-content: center;
-  align-items: center; */
   h1 {
     font-size: 64px;
+    margin-bottom: 64px;
+    font-weight: 500;
+  }
+}
+
+.mobilePage {
+  background-color: "!red";
+  min-height: 100vh;
+  width: 100%;
+  /* color: #f7f7f7; */
+  margin: auto;
+  display: flex;
+  padding: 64px 64px 0 64px;
+
+  h1 {
+    font-size: 48px;
     margin-bottom: 64px;
     font-weight: 500;
   }
@@ -110,3 +127,19 @@ body {
     transform: rotate3d(1, 0, 0, 0deg);
   }
 }
+
+/* @media screen and (min-width: 768px) {
+  .page {
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 64px 128px 0 128px;
+
+    h1 {
+      font-size: 64px;
+      margin-bottom: 64px;
+      font-weight: 500;
+    }
+  }
+} */

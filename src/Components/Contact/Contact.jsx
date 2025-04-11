@@ -96,6 +96,10 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col flex-[55%] bg-white/10 shadow-lg rounded-xl p-6 gap-6">
+          {/* <p>
+            I'm interested in job offers and freelance opportunities. However,
+            if you have other requests or questions, feel free to use the form
+          </p> */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid w-full  gap-4">
               <TextField
@@ -139,7 +143,7 @@ const ContactData = ({ icon, title, data }) => {
   return (
     <div className="flex text-left items-center gap-4">
       {/* <div className="min-h-10 min-w-10 bg-[#39dcc5] flex items-center justify-center text-black text-2xl rounded-full"> */}
-      <div className="min-h-10 min-w-10 bg-white/10 flex items-center justify-center text-[#39dcc5] text-2xl rounded-full">
+      <div className="min-h-10 min-w-10 bg-white/10 flex items-center justify-center primary-text text-2xl rounded-full">
         {icon}
       </div>
       <div className="flex flex-col">

@@ -6,7 +6,7 @@ const Info = () => {
   return (
     <>
       <Navbar />
-      <section className="page info flex-col" id="info">
+      <section className="page flex-col" id="info">
         {/* <div className="flex"> */}
         <div className="flex flex-col gap-8 justify-center text-center h-full my-auto">
           <div className="flex flex-col">
@@ -15,7 +15,7 @@ const Info = () => {
             </RevealAnimation>
             <RevealAnimation direction="left">
               <h1 className="!mb-0">
-                <span className="text-[#39dcc5]">One Pixel</span> at a Time
+                <span className="primary-text">One Pixel</span> at a Time
               </h1>
             </RevealAnimation>
           </div>
@@ -23,7 +23,7 @@ const Info = () => {
             <RevealAnimation>
               <p>
                 Creating smooth, responsive, and{" "}
-                <span className={`text-[#39dcc5]`}>user-centric</span> web
+                <span className={`primary-text`}>user-centric</span> web
                 applications.
               </p>{" "}
             </RevealAnimation>

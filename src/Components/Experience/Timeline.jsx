@@ -40,9 +40,9 @@ const Timeline = ({ data }) => {
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
           I've been working in{" "}
-          <span className="text-[#39dcc5]">{data?.[0]?.company}</span> for the
+          <span className="primary-text">{data?.[0]?.company}</span> for the
           past{" "}
-          <span className="text-[#39dcc5]">
+          <span className="primary-text">
             {
               // `${yearsOfExperience} years`
               "2 years"
@@ -61,7 +61,7 @@ const Timeline = ({ data }) => {
                 <div>
                   <div className="flex flex-col mt-6">
                     <span className="text-5xl">{item.timeline.from.year}</span>
-                    <span className="text-[12px] -mt-[6px] text-[#39dcc5]">
+                    <span className="text-[12px] -mt-[6px] primary-text">
                       {item.timeline.from.month}
                     </span>
                   </div>
@@ -69,7 +69,7 @@ const Timeline = ({ data }) => {
                 {/* <div className="text-5xl mt-1 mx-1">{" - "}</div>
                 <div className="flex flex-col">
                   <span className="text-5xl">{item.timeline.to.year}</span>
-                  <span className="text-[12px] -mt-[6px] text-[#39dcc5]">
+                  <span className="text-[12px] -mt-[6px] primary-text">
                     {item.timeline.to.month}
                   </span>
                 </div> */}
@@ -85,7 +85,7 @@ const Timeline = ({ data }) => {
 
             <div className="relative w-full">
               <h3 className=" block text-4xl mb-4 text-left font-bold">
-                <span className="text-[#39dcc5]">
+                <span className="primary-text">
                   {item.project.split("-")[0]}
                 </span>
                 <span> - </span>
