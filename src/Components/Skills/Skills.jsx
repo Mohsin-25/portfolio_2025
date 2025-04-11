@@ -22,10 +22,10 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
 
   return (
-    <section ref={targetRef} className="px-32 relative h-[400vh]">
+    <section ref={targetRef} className="px-12 md:px-32 relative h-[400vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         {/* <RevealAnimation> */}
-        <h1 className="text-6xl absolute top-[60px]">Skills</h1>
+        <h1 className="text-5xl md:text-6xl absolute top-[60px]">Skills</h1>
         {/* </RevealAnimation> */}
         <motion.div style={{ x }} className="flex gap-8">
           {skills?.map((card, index) => {
@@ -39,12 +39,12 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[350px] w-[600px] overflow-hidden rounded-2xl bg-white/10">
+    <div className="group relative h-[350px] w-[330px] md:w-[600px] overflow-hidden rounded-2xl bg-white/10">
       <div className="p-6 absolute inset-0 z-10 flex flex-col justify-between">
-        <div className="text-4xl flex mx-auto text-center">
+        <div className="text-2xl md:text-4xl flex mx-auto text-center min-h-20">
           <span>{card?.group}</span>
         </div>
-        <div className="col-span-3 grid grid-cols-2 gap-2 text-2xl">
+        <div className="col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-2 text-2xl">
           {card?.skill?.map((item, index) => (
             <span
               key={index}

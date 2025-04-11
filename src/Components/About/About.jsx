@@ -13,7 +13,7 @@ const About = () => {
             About Me
           </motion.h1>
         </RevealAnimation>
-        <div className="flex flex-col-reverse md:flex-row gap-4">
+        <div className="flex flex-col-reverse lg:flex-row gap-4">
           <div className="flex flex-col flex-1/2 text-2xl gap-6">
             <RevealAnimation direction="left">
               <motion.p>Hey there!👋</motion.p>
@@ -41,7 +41,7 @@ const About = () => {
               </motion.p>
             </RevealAnimation>
           </div>
-          <div className="flex-1/2 flex justify-center md:-mt-[128px]">
+          <div className="flex-1/2 flex justify-center mlgd:-mt-[128px]">
             <RevealAnimation>
               <img src="/profile.png" alt="" className="h-[50vh] ml-auto" />
             </RevealAnimation>
