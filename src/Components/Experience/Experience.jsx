@@ -20,7 +20,8 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2024,
-          month: "January",
+          month: "January - Present",
+          // month: "January",
         },
         to: {
           year: 2025,
@@ -40,7 +41,8 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2022,
-          month: "December",
+          month: "December - 2024 Jan",
+          // month: "December",
         },
         to: {
           year: 2024,
@@ -50,9 +52,9 @@ const Experience = () => {
     },
   ];
   return (
-    <section className="page flex-col h-[170vh]" id="experience">
+    <section className="page flex-col min-h-[170vh]" id="experience">
       <RevealAnimation>
-        <motion.h1>Experience</motion.h1>
+        <h1>Experience</h1>
       </RevealAnimation>
       <Timeline data={data} />
     </section>

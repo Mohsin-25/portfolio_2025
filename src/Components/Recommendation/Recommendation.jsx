@@ -8,9 +8,9 @@ const Recommendation = () => {
       {/* WIP - make reusable card */}
       <div>
         <RevealAnimation>
-          <motion.h1>Recommendation</motion.h1>
+          <h1>Recommendation</h1>
         </RevealAnimation>
-        <div className="w-[550px] h-fit bg-white/10 shadow-lg rounded-xl p-6 text-center mt-12">
+        <div className="max-w-[550px] h-fit bg-white/10 shadow-lg rounded-xl p-6 text-center mt-12">
           <img
             src="/abhishek-shimpi.jpg"
             alt="Abhishek Shimpi"

@@ -67,8 +67,8 @@ const Contact = () => {
       <RevealAnimation>
         <motion.h1>Contact</motion.h1>
       </RevealAnimation>
-      <div className="flex text-center gap-6">
-        <div className="flex flex-[45%] flex-col pr-6 gap-10">
+      <div className="flex flex-col-reverse lg:flex-row text-center gap-6">
+        <div className="flex flex-[45%] flex-col md:flex-row lg:flex-col pr-6 gap-10">
           <ContactData
             icon={<HiMiniMapPin />}
             title="Address"
@@ -141,7 +141,14 @@ export default Contact;
 
 const ContactData = ({ icon, title, data }) => {
   return (
-    <div className="flex text-left items-center gap-4">
+    <div
+      className={`flex flex-row text-left items-center gap-4 ${
+        !(
+          title?.toLowerCase()?.includes("mobile") ||
+          title?.toLowerCase()?.includes("email")
+        ) && "hidden lg:flex"
+      }`}
+    >
       {/* <div className="min-h-10 min-w-10 bg-[#39dcc5] flex items-center justify-center text-black text-2xl rounded-full"> */}
       <div className="min-h-10 min-w-10 bg-white/10 flex items-center justify-center primary-text text-2xl rounded-full">
         {icon}
