@@ -95,7 +95,7 @@ const Contact = () => {
             data="https://www.instagram.com/amigo_v3.0/?igshid=YmMyMTA2M2Y%3D"
           />
         </div>
-        <div className="flex flex-col flex-[55%] bg-white/10 shadow-lg rounded-xl p-6 gap-6">
+        <div className="flex flex-col flex-[55%] bg-white/10 shadow-sm/70 rounded-xl p-6 gap-6 shadow-[#39dcc5]">
           {/* <p>
             I'm interested in job offers and freelance opportunities. However,
             if you have other requests or questions, feel free to use the form

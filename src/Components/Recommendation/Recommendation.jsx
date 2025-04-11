@@ -10,7 +10,7 @@ const Recommendation = () => {
         <RevealAnimation>
           <h1>Recommendation</h1>
         </RevealAnimation>
-        <div className="max-w-[550px] h-fit bg-white/10 shadow-lg rounded-xl p-6 text-center mt-12">
+        <div className="max-w-[550px] h-fit bg-white/10 shadow-sm/70 rounded-xl p-6 text-center mt-12 shadow-[#39dcc5]">
           <img
             src="/abhishek-shimpi.jpg"
             alt="Abhishek Shimpi"

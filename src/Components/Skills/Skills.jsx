@@ -39,7 +39,7 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[350px] w-[330px] md:w-[600px] overflow-hidden rounded-2xl bg-white/10">
+    <div className="group relative h-[350px] w-[330px] md:w-[600px] overflow-hidden rounded-xl bg-white/10 shadow-sm/70 shadow-[#39dcc5]">
       <div className="p-6 absolute inset-0 z-10 flex flex-col justify-between">
         <div className="text-2xl md:text-4xl flex mx-auto text-center min-h-20">
           <span>{card?.group}</span>
@@ -48,7 +48,7 @@ const Card = ({ card }) => {
           {card?.skill?.map((item, index) => (
             <span
               key={index}
-              className={`bg-white/10 px-2 py-1 rounded-lg border border-white/20  hover:bg-white/15
+              className={`bg-white/10 px-2 py-1 rounded-lg border border-white/20 text-[#39dcc5] hover:bg-white/15
                 ${item?.includes("*") && "text-white/1"}`}
               // hover:bg-white/0 hover:primary-text border-[1px] border-transparent hover:border-[#39dcc5]
             >
