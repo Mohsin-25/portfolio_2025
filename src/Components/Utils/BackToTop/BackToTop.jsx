@@ -19,7 +19,7 @@ const BackToTop = () => {
       <HiOutlineArrowUpCircle
         size={30}
         onClick={scrollToSection}
-        className="fixed bottom-4 right-4 cursor-pointer hover:scale-120 hover:primary-text"
+        className="fixed bottom-4 right-4 cursor-pointer hover:scale-110 hover-primary-text"
       />
     </div>
   );

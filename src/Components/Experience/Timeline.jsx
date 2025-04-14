@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "motion/react";
 import { yearsOfExperience } from "../Utils/Other/constants";
+import CharacterFlip from "../Utils/Animation/CharacterFlip";
 
 const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -40,13 +41,17 @@ const Timeline = ({ data }) => {
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         <p className="text-neutral-700 dark:text-neutral-300 text-lg ">
           I've been working in{" "}
-          <span className="primary-text">{data?.[0]?.company}</span> for the
-          past{" "}
           <span className="primary-text">
-            {
-              // `${yearsOfExperience} years`
-              "2 years"
-            }
+            <CharacterFlip speed={50}>{data?.[0]?.company}</CharacterFlip>
+          </span>{" "}
+          for the past{" "}
+          <span className="primary-text">
+            <CharacterFlip speed={100}>
+              {
+                // `${yearsOfExperience} years`
+                "2+ years"
+              }
+            </CharacterFlip>
           </span>
           . Here's a timeline of my journey.
         </p>
@@ -92,7 +97,9 @@ const Timeline = ({ data }) => {
                   </span>
                 </div>
                 <span className="primary-text">
-                  {item.project.split("-")[0]}
+                  <CharacterFlip speed={100}>
+                    {item.project.split("-")[0]}
+                  </CharacterFlip>
                 </span>
                 <span> - </span>
                 <span>{item.project.split("-")[1]}</span>

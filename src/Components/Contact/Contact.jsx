@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <section className="page flex flex-col" id="contact">
       <RevealAnimation>
-        <motion.h1>Contact</motion.h1>
+        <motion.h1>Contact Me</motion.h1>
       </RevealAnimation>
       <div className="flex flex-col-reverse lg:flex-row text-center gap-6">
         <div className="flex flex-[45%] flex-col md:flex-row lg:flex-col pr-6 gap-10">

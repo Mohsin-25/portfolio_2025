@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PopRevealAnimation from "../Utils/Animation/PopRevealAnimation";
 import { navbarItems } from "../Utils/Other/constants";
 import { BiMenuAltRight } from "react-icons/bi";
+import CharacterFlip from "../Utils/Animation/CharacterFlip";
+import { HiCloudArrowDown, HiOutlineCloudArrowDown } from "react-icons/hi2";
 
 const Navbar = () => {
   const [openmenu, setOpenMenu] = useState(false);
@@ -21,10 +23,14 @@ const Navbar = () => {
       <div className="flex justify-between p-4 z-10000" id="navbar">
         <div className="flex">
           <PopRevealAnimation delay={0.35}>
-            <div className="animate-asd  px-2 mx-2 cursor-pointer hover:primary-text hover:scale-110 ease-in-out whitespace-nowrap">
+            <div className="px-2 mx-2 text-xl cursor-pointer  hover:scale-110 ease-in-out whitespace-nowrap">
               {/* {"<Mohsin />"} */}
               <span className="lessThan">{"<"}</span>
-              <span className="mr-1">{"Mohsin"}</span>
+              <span className="mr-1 primary-text">
+                <CharacterFlip mode="auto" speed={100}>
+                  {"mohsin"}
+                </CharacterFlip>
+              </span>
               <span className="slash">{"/"}</span>
               <span className="moreThan">{">"}</span>
             </div>
@@ -66,8 +72,8 @@ const Navbar = () => {
                 // delay={0.35 + 0.1 + index / 5}
               >
                 <li
-                  className=" px-4 cursor-pointer hover:scale-110 ease-in-out 
-                group-hover:opacity-60 hover:opacity-100 hover:primary-text
+                  className="px-4 cursor-pointer hover:scale-110 ease-in-out 
+                group-hover:opacity-60 hover:opacity-100 hover-primary-text
                 "
                   // peer opacity-50 hover:opacity-100
                   // border-b-2 border-transparent hover:border-blue-400
@@ -75,18 +81,20 @@ const Navbar = () => {
                     scrollToSection(item);
                   }}
                 >
-                  {item}
+                  <CharacterFlip cursor="pointer">
+                    {item?.toUpperCase()}
+                  </CharacterFlip>
                 </li>
               </PopRevealAnimation>
             );
           })}
           <PopRevealAnimation delay={0.35 + (navbarItems?.length + 2) / 10}>
-            <a href="./resume.pdf" download="Mohsin_Resume">
+            <a href="./mohsin_resume.pdf" download="Mohsin_Resume">
               <li
                 className="px-4 cursor-pointer hover:scale-110 ease-in-out 
-      group-hover:opacity-60 hover:opacity-100 hover:primary-text"
+      group-hover:opacity-60 hover:opacity-100 primary-text hover:text-[#dcd7c9] flex items-center gap-2"
               >
-                Download CV
+                <HiCloudArrowDown size={22} /> <span>RESUME</span>
               </li>
             </a>
           </PopRevealAnimation>

@@ -1,6 +1,7 @@
 import React from "react";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
 import { motion } from "motion/react";
+import CharacterFlip from "../Utils/Animation/CharacterFlip";
 
 const About = () => {
   return (
@@ -20,15 +21,21 @@ const About = () => {
             </RevealAnimation>
             <RevealAnimation>
               <motion.p>
-                I'm <span className="primary-text">Mohammad Mohsin</span>, a
-                frontend developer who loves turning ideas into elegant web
+                I'm{" "}
+                <span className="primary-text">
+                  <CharacterFlip speed={100}>Mohammad Mohsin</CharacterFlip>
+                </span>
+                , a frontend developer who loves turning ideas into elegant web
                 interfaces.
               </motion.p>
             </RevealAnimation>
             <RevealAnimation direction="left">
               <motion.p>
-                With <span className="primary-text">2+ years</span> of
-                experience in React, JavaScript, and modern styling tools, I
+                With{" "}
+                <span className="primary-text">
+                  <CharacterFlip speed={100}>2+ years</CharacterFlip>
+                </span>{" "}
+                of experience in React, JavaScript, and modern styling tools, I
                 build digital experiences that are fast, functional, and
                 visually sharp.
               </motion.p>

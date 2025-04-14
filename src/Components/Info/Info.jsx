@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
+import CharacterFlip from "../Utils/Animation/CharacterFlip";
 
 const Info = () => {
   return (
@@ -15,7 +16,12 @@ const Info = () => {
             </RevealAnimation>
             <RevealAnimation direction="left">
               <h1 className="!mb-0">
-                <span className="primary-text">One Pixel</span> at a Time
+                <span className="primary-text">
+                  <CharacterFlip mode="auto" speed={100}>
+                    ONE PIXEL
+                  </CharacterFlip>
+                </span>{" "}
+                at a Time
               </h1>
             </RevealAnimation>
           </div>
@@ -23,8 +29,10 @@ const Info = () => {
             <RevealAnimation>
               <p>
                 Creating smooth, responsive, and{" "}
-                <span className={`primary-text`}>user-centric</span> web
-                applications.
+                <span className={`primary-text`}>
+                  <CharacterFlip>{"user-centric"}</CharacterFlip>
+                </span>{" "}
+                web applications.
               </p>{" "}
             </RevealAnimation>
           </div>

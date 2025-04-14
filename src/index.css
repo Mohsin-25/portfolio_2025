@@ -13,6 +13,10 @@ body {
   color: #39dcc5;
 }
 
+.hover-primary-text:hover {
+  color: #39dcc5;
+}
+
 .page {
   min-height: 100vh;
   width: 100%;

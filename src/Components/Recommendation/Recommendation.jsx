@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
+import CharacterFlip from "../Utils/Animation/CharacterFlip";
 
 const Recommendation = () => {
   return (
@@ -37,7 +38,7 @@ const Recommendation = () => {
             <motion.div className="flex justify-center">
               <RevealAnimation direction="left">
                 <motion.h3 className="text-lg font-semibold primary-text mt-4">
-                  Abhishek Shimpi
+                  <CharacterFlip speed={100}>Abhishek Shimpi</CharacterFlip>
                 </motion.h3>
                 <motion.p className="text-sm text-gray-500">
                   Lead Frontend Engineer @ Fyntune Solutions
