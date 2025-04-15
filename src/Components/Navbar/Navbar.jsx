@@ -65,14 +65,14 @@ const Navbar = () => {
         </> */}
         </div>
         <div className="md:hidden z-10">
-          {/* {!openMenu && (
+          {!openMenu && (
             <BiMenuAltRight size={30} onClick={() => setOpenMenu(!openMenu)} />
-          )} */}
-          {openMenu ? (
+          )}
+          {/* {openMenu ? (
             <HiMiniXMark size={30} onClick={() => setOpenMenu(!openMenu)} />
           ) : (
             <BiMenuAltRight size={30} onClick={() => setOpenMenu(!openMenu)} />
-          )}
+          )} */}
         </div>
         <ul className="md:flex group hidden">
           {navbarItems?.map((item, index) => {
@@ -112,11 +112,16 @@ const Navbar = () => {
         </ul>
         {openMenu && (
           <ul
-            className="flex-col z-20 fixed bg-white/20 rounded-md w-[95%] h-full mt-12 text-5xl p-4"
+            className="flex-col z-20 fixed bg-white/20 rounded-md w-[95%] h-full text-5xl p-4"
             style={{
               backdropFilter: "blur(16px) saturate(180%)",
             }}
           >
+            <HiMiniXMark
+              size={50}
+              onClick={() => setOpenMenu(!openMenu)}
+              className="absolute right-0 top-0 rounded-tr-md bg-[#39dcc5] text-black"
+            />
             {navbarItems?.map((item, index) => {
               return (
                 <PopRevealAnimation
@@ -125,10 +130,11 @@ const Navbar = () => {
                   // delay={0.35 + 0.1 + index / 5}
                 >
                   <li
-                    className="px-5 py-5 cursor-pointer hover:scale-110 ease-in-out 
+                    className="px-5 py-2.5 cursor-pointer hover:scale-110 ease-in-out 
                  hover-primary-text
                 "
                     onClick={() => {
+                      setOpenMenu(false);
                       scrollToSection(item);
                     }}
                   >
@@ -142,7 +148,7 @@ const Navbar = () => {
             <PopRevealAnimation delay={0.35 + (navbarItems?.length + 2) / 10}>
               <a href="./mohsin_resume.pdf" download="Mohsin_Resume">
                 <li
-                  className="px-4 cursor-pointer hover:scale-110 ease-in-out 
+                  className="p-5 cursor-pointer hover:scale-110 ease-in-out 
       group-hover:opacity-60 hover:opacity-100 primary-text hover:text-[#dcd7c9] flex items-center gap-2"
                 >
                   <span>RESUME</span> <HiCloudArrowDown size={50} />
