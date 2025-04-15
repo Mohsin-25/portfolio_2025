@@ -49,7 +49,7 @@ const About = () => {
             </RevealAnimation>
           </div>
           <div
-            className="flex-1/2 flex justify-center items-end lg:-mt-[128px] overflow-hidden h-[50vh] md:w-[70%] relative"
+            className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#dcd7c9] overflow-hidden h-[50vh] md:w-[70%] relative"
             style={{
               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
               backgroundImage: "url('/word-art.png')",
@@ -68,9 +68,6 @@ const About = () => {
               src="/profile-without-bg.png"
               alt="profile"
               className="h-[50vh] z-10 relative"
-              style={{
-                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
-              }}
             />
             {/* </RevealAnimation> */}
           </div>
