@@ -48,12 +48,32 @@ const About = () => {
               </motion.p>
             </RevealAnimation>
           </div>
-          <div className="flex-1/2 flex justify-center mlgd:-mt-[128px]">
-            <RevealAnimation>
-              <img src="/profile.png" alt="" className="h-[50vh] ml-auto" />
-            </RevealAnimation>
+          <div
+            className="flex-1/2 flex justify-center items-end lg:-mt-[128px] overflow-hidden h-[50vh] md:w-[70%] relative"
+            style={{
+              borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+              backgroundImage: "url('/word-art.png')",
+              backgroundAttachment: "fixed",
+              backgroundPosition: "right",
+              backgroundRepeat: "no-repeat",
+              // backgroundSize: "cover",
+              opacity: 0.7,
+              zIndex: 0,
+            }}
+            // style={{ borderRadius: "75% 25% 34% 66% / 64% 24% 76% 36% " }}
+            // style={{ borderRadius: "36% 64% 73% 27% / 33% 67% 33% 67% " }}
+          >
+            {/* <RevealAnimation> */}
+            <img
+              src="/profile-without-bg.png"
+              alt="profile"
+              className="h-[50vh] z-10 relative"
+              style={{
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
+              }}
+            />
+            {/* </RevealAnimation> */}
           </div>
-          <div>{/* img */}</div>
         </div>
       </div>
     </section>

@@ -12,6 +12,9 @@ body {
 .primary-text {
   color: #39dcc5;
 }
+.primary-background {
+  background-color: #39dcc5;
+}
 
 .hover-primary-text:hover {
   color: #39dcc5;
