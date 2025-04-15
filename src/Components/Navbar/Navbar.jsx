@@ -3,10 +3,14 @@ import PopRevealAnimation from "../Utils/Animation/PopRevealAnimation";
 import { navbarItems } from "../Utils/Other/constants";
 import { BiMenuAltRight } from "react-icons/bi";
 import CharacterFlip from "../Utils/Animation/CharacterFlip";
-import { HiCloudArrowDown, HiOutlineCloudArrowDown } from "react-icons/hi2";
+import {
+  HiCloudArrowDown,
+  HiMiniXMark,
+  HiOutlineCloudArrowDown,
+} from "react-icons/hi2";
 
 const Navbar = () => {
-  const [openmenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const scrollToSection = (item) => {
     const section = document.getElementById(item?.toLowerCase());
     if (section) {
@@ -60,8 +64,15 @@ const Navbar = () => {
           </div>
         </> */}
         </div>
-        <div className="md:hidden">
-          <BiMenuAltRight size={30} />
+        <div className="md:hidden z-10">
+          {/* {!openMenu && (
+            <BiMenuAltRight size={30} onClick={() => setOpenMenu(!openMenu)} />
+          )} */}
+          {openMenu ? (
+            <HiMiniXMark size={30} onClick={() => setOpenMenu(!openMenu)} />
+          ) : (
+            <BiMenuAltRight size={30} onClick={() => setOpenMenu(!openMenu)} />
+          )}
         </div>
         <ul className="md:flex group hidden">
           {navbarItems?.map((item, index) => {
@@ -99,6 +110,47 @@ const Navbar = () => {
             </a>
           </PopRevealAnimation>
         </ul>
+        {openMenu && (
+          <ul
+            className="flex-col z-20 fixed bg-white/20 rounded-md w-[95%] h-full mt-12 text-5xl p-4"
+            style={{
+              backdropFilter: "blur(16px) saturate(180%)",
+            }}
+          >
+            {navbarItems?.map((item, index) => {
+              return (
+                <PopRevealAnimation
+                  delay={0.35 + (index + 1) / 10}
+                  key={index}
+                  // delay={0.35 + 0.1 + index / 5}
+                >
+                  <li
+                    className="px-5 py-5 cursor-pointer hover:scale-110 ease-in-out 
+                 hover-primary-text
+                "
+                    onClick={() => {
+                      scrollToSection(item);
+                    }}
+                  >
+                    <CharacterFlip cursor="pointer">
+                      {item?.toUpperCase()}
+                    </CharacterFlip>
+                  </li>
+                </PopRevealAnimation>
+              );
+            })}
+            <PopRevealAnimation delay={0.35 + (navbarItems?.length + 2) / 10}>
+              <a href="./mohsin_resume.pdf" download="Mohsin_Resume">
+                <li
+                  className="px-4 cursor-pointer hover:scale-110 ease-in-out 
+      group-hover:opacity-60 hover:opacity-100 primary-text hover:text-[#dcd7c9] flex items-center gap-2"
+                >
+                  <span>RESUME</span> <HiCloudArrowDown size={50} />
+                </li>
+              </a>
+            </PopRevealAnimation>
+          </ul>
+        )}
       </div>{" "}
     </>
   );
