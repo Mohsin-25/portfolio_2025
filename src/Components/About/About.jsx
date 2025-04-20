@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
 import { motion } from "motion/react";
 import CharacterFlip from "../Utils/Animation/CharacterFlip";
 
 const About = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (bgRef.current) {
+        bgRef.current.style.backgroundPosition = `left ${scrollY * 0.5}px`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <section className="page" id="about">
       <div className="">
@@ -49,15 +62,16 @@ const About = () => {
             </RevealAnimation>
           </div>
           <div
-            className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#dcd7c9] overflow-hidden h-[50vh] md:w-[70%] relative"
+            ref={bgRef}
+            className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#000000] overflow-hidden h-[50vh] md:w-[70%] relative"
             style={{
               borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
-              backgroundImage: "url('/word-art.png')",
+              backgroundImage: "url('/react-word-art.png')",
               backgroundAttachment: "fixed",
-              backgroundPosition: "right",
-              backgroundRepeat: "no-repeat",
+              backgroundPosition: "left",
+              // backgroundRepeat: "no-repeat",
               // backgroundSize: "cover",
-              opacity: 0.7,
+              opacity: 0.8,
               zIndex: 0,
             }}
             // style={{ borderRadius: "75% 25% 34% 66% / 64% 24% 76% 36% " }}
