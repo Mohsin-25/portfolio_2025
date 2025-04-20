@@ -25,7 +25,14 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="px-12 md:px-32 relative h-[400vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         {/* <RevealAnimation> */}
-        <h1 className="text-5xl md:text-6xl absolute top-[60px]">Skills</h1>
+        <div className="flex flex-row justify-between absolute top-[60px] w-full">
+          <h1 className="text-5xl md:text-6xl">Skills</h1>
+          <div class="scroll-icon-container">
+            <div class="field">
+              <div class="mouse text-[10px] flex justify-center"></div>
+            </div>
+          </div>
+        </div>
         {/* </RevealAnimation> */}
         <motion.div style={{ x }} className="flex gap-8">
           {skills?.map((card, index) => {

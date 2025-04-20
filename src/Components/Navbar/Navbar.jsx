@@ -32,7 +32,7 @@ const Navbar = () => {
               <span className="lessThan">{"<"}</span>
               <span className="mr-1 primary-text">
                 <CharacterFlip mode="auto" speed={100}>
-                  {"mohsin"}
+                  {""}
                 </CharacterFlip>
               </span>
               <span className="slash">{"/"}</span>
