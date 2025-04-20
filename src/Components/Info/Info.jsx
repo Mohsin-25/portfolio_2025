@@ -42,6 +42,7 @@ const Info = () => {
         </div>
       </div> */}
       </section>
+      <section className="half-page"></section>
     </>
   );
 };

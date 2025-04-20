@@ -52,12 +52,15 @@ const Experience = () => {
     },
   ];
   return (
-    <section className="page flex-col min-h-[170vh]" id="experience">
-      <RevealAnimation>
-        <h1>Experience</h1>
-      </RevealAnimation>
-      <Timeline data={data} />
-    </section>
+    <>
+      <section className="page flex-col" id="experience">
+        <RevealAnimation>
+          <h1>Experience</h1>
+        </RevealAnimation>
+        <Timeline data={data} />
+      </section>
+      <section className="half-page"></section>
+    </>
   );
 };
 
