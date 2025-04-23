@@ -46,7 +46,7 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div className="group relative h-[350px] w-[330px] md:w-[600px] overflow-hidden rounded-xl bg-white/10 shadow-sm/70 shadow-[#39dcc5]">
+    <div className="group relative h-[350px] w-[330px] md:w-[620px] overflow-hidden rounded-xl bg-white/10 shadow-sm/70 shadow-[#39dcc5]">
       <div className="p-6 absolute inset-0 z-10 flex flex-col justify-between">
         <div className="text-2xl md:text-4xl flex mx-auto text-center min-h-20">
           <span>{card?.group}</span>

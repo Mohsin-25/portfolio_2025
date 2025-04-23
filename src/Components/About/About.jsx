@@ -65,12 +65,12 @@ const About = () => {
             </div>
             <div
               ref={bgRef}
-              className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#000000] overflow-hidden h-[50vh]  relative"
+              className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#000000] overflow-hidden h-[50vh] rounded-md relative"
               style={{
                 // borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
                 backgroundImage: "url('/react-word-art.png')",
                 backgroundAttachment: "fixed",
-                backgroundPosition: "right",
+                // backgroundPosition: "bottom left",
                 // backgroundRepeat: "no-repeat",
                 // backgroundSize: "cover",
                 opacity: 0.7,
