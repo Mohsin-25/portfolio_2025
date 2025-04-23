@@ -19,10 +19,10 @@ export const skills = [
     skill: [
       "React.js",
       "JavaScript",
-      "Reusable Components",
+      "React Hooks",
       "Custom Hooks",
+      "Reusable Components",
       "HTML",
-      "*",
     ],
     color: "",
   },
