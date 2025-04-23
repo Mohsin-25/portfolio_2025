@@ -6,17 +6,18 @@ import CharacterFlip from "../Utils/Animation/CharacterFlip";
 const About = () => {
   const bgRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (bgRef.current) {
-        bgRef.current.style.backgroundPosition = `left ${scrollY * 0.5}px`;
-      }
-    };
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    if (bgRef.current) {
+      bgRef.current.style.backgroundPosition = `left ${scrollY * 0.25}px`;
+    }
+  };
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <>
       <section className="page" id="about">
@@ -64,12 +65,12 @@ const About = () => {
             </div>
             <div
               ref={bgRef}
-              className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#000000] overflow-hidden h-[50vh] md:w-[70%] relative"
+              className="flex-1/2 flex justify-center items-end lg:-mt-[128px] bg-[#000000] overflow-hidden h-[50vh]  relative"
               style={{
-                borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+                // borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
                 backgroundImage: "url('/react-word-art.png')",
                 backgroundAttachment: "fixed",
-                backgroundPosition: "left",
+                backgroundPosition: "right",
                 // backgroundRepeat: "no-repeat",
                 // backgroundSize: "cover",
                 opacity: 0.7,

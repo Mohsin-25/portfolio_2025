@@ -1,7 +1,30 @@
 import { Description, Field, Input, Label } from "@headlessui/react";
 import React from "react";
 
-const TextField = ({ label, slug, setDataFn, data }) => {
+const TextField = ({
+  label,
+  slug,
+  setDataFn,
+  data,
+  validation,
+  required,
+  maxLength,
+  type = "text",
+}) => {
+  const handleChange = (e) => {
+    let value = e.target.value;
+
+    if (validation === "numeric") {
+      value = value.replace(/[^0-9]/g, "");
+    } else if (validation === "alphanumeric") {
+      value = value.replace(/[^a-zA-Z0-9 ]/g, "");
+    } else if (validation === "email") {
+      value = value.replace(/[^a-zA-Z0-9@._-]/g, "");
+    }
+
+    setDataFn((prev) => ({ ...prev, [slug]: value }));
+  };
+
   return (
     <div className="w-full">
       <Field className="text-left">
@@ -17,9 +40,10 @@ const TextField = ({ label, slug, setDataFn, data }) => {
           key={slug}
           name={slug}
           value={data?.[slug]}
-          onChange={(e) =>
-            setDataFn((prev) => ({ ...prev, [slug]: e.target.value }))
-          }
+          onChange={handleChange}
+          required={required}
+          maxLength={maxLength}
+          type={type}
         />
       </Field>
     </div>
