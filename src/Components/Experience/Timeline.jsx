@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "motion/react";
 import { yearsOfExperience } from "../Utils/Other/constants";
 import CharacterFlip from "../Utils/Animation/CharacterFlip";
+import { getExperience } from "../../hooks/helperFunctions";
+import { startDate } from "../../constants/constants";
 
 const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -31,6 +33,8 @@ const Timeline = ({ data }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const experience = getExperience(startDate);
+
   return (
     <div className="w-full font-sans" ref={containerRef}>
       <div className="mx-auto">
@@ -46,12 +50,7 @@ const Timeline = ({ data }) => {
           </span>{" "}
           for the past{" "}
           <span className="primary-text">
-            <CharacterFlip speed={100}>
-              {
-                // `${yearsOfExperience} years`
-                "2+ years"
-              }
-            </CharacterFlip>
+            <CharacterFlip speed={100}>{`${experience} years`}</CharacterFlip>
           </span>
           . Here's a timeline of my journey.
         </p>

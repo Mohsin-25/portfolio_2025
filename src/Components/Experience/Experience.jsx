@@ -7,6 +7,27 @@ const Experience = () => {
   const data = [
     {
       company: "Fyntune Solutions Pvt. Ltd.",
+      project: "RNR - Rewards & Recognition",
+      content: [
+        "Platform for ICICI Prudential for configuring and calculating commissions, incentives, goalsheets, and rewards based on policy transactions and business rules across channels, intermediaries, and employees",
+        "Led a team of 4 frontend developers, coordinating task allocation, development activities, code reviews, technical guidance, and ensured coding standards and consistent architecture across the team",
+        "Collaborated with business stakeholders and backend teams to gather, analyze, and clarify requirements, translating complex business rules into scalable frontend workflows and configurations",
+        "Participated in feature planning, estimation, production issue resolution and releases, ensuring timely delivery of business-critical features",
+      ],
+      timeline: {
+        from: {
+          year: 2025,
+          month: "July - Present",
+          // month: "January",
+        },
+        to: {
+          year: 2026,
+          month: new Date().toLocaleString("default", { month: "long" }),
+        },
+      },
+    },
+    {
+      company: "Fyntune Solutions Pvt. Ltd.",
       project: "BroCore - Policy Data Warehouse",
       content: [
         "It is an insurance platform enabling brokers/agents to manage policies, endorsements, claims, renewals, and view details efficiently",
@@ -20,7 +41,7 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2024,
-          month: "January - Present",
+          month: "January - 2025 July",
           // month: "January",
         },
         to: {
@@ -41,7 +62,7 @@ const Experience = () => {
       timeline: {
         from: {
           year: 2022,
-          month: "December - 2024 Jan",
+          month: "December - 2024 January",
           // month: "December",
         },
         to: {
