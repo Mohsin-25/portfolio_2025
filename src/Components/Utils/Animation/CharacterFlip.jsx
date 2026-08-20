@@ -26,15 +26,15 @@ const CharacterFlip = ({
     animationRef.current = setInterval(() => {
       setText(() =>
         children
-          .split("")
-          .map((char, index) => {
+          ?.split("")
+          ?.map((char, index) => {
             if (char === " ") return " ";
             if (char === "-") return "-";
             if (char === ".") return ".";
             if (index < iterations) return children[index];
             return characters[Math.floor(Math.random() * characters.length)];
           })
-          .join("")
+          ?.join(""),
       );
 
       iterations++;

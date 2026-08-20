@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import RevealAnimation from "../Utils/Animation/RevealAnimation";
 import { motion } from "motion/react";
 import CharacterFlip from "../Utils/Animation/CharacterFlip";
+import { startDate } from "../../constants/constants";
+import { getExperience } from "../../hooks/helperFunctions";
 
 const About = () => {
   const bgRef = useRef(null);
@@ -17,6 +19,8 @@ const About = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const experience = getExperience(startDate);
 
   return (
     <>
@@ -48,7 +52,9 @@ const About = () => {
                 <motion.p>
                   With{" "}
                   <span className="primary-text">
-                    <CharacterFlip speed={100}>2+ years</CharacterFlip>
+                    <CharacterFlip speed={100}>
+                      {`${experience} years`}
+                    </CharacterFlip>
                   </span>{" "}
                   of experience in React, JavaScript, and modern styling tools,
                   I build digital experiences that are fast, functional, and
