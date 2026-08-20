@@ -100,7 +100,7 @@ const Navbar = () => {
             );
           })}
           <PopRevealAnimation delay={0.35 + (navbarItems?.length + 2) / 10}>
-            <a href="./mohsin_resume.pdf" download="Mohsin_Resume">
+            <a href="./mohammad_mohsin_resume.pdf" download="Mohsin_Resume">
               <li
                 className="px-4 cursor-pointer hover:scale-110 ease-in-out 
       group-hover:opacity-60 hover:opacity-100 primary-text hover:text-[#dcd7c9] flex items-center gap-2"
