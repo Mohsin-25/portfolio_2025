@@ -11,6 +11,7 @@ import { BackgroundBeams } from "./Components/Utils/Animation/Meteor";
 import BackToTop from "./Components/Utils/BackToTop/BackToTop";
 import "./index.css";
 import { ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const lenis = new Lenis({
@@ -33,12 +34,13 @@ function App() {
       <About />
       <Skills />
       <Experience />
-      {/* <Projects /> */}
+      <Projects />
       <Recommendation />
       <Contact />
       <BackToTop />
       {/* </TracingBeam> */}
       <ToastContainer />
+      <Analytics />
     </>
   );
 }
