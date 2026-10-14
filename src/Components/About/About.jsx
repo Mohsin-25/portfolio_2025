@@ -68,6 +68,19 @@ const About = () => {
                   responsive, and user-first.
                 </motion.p>
               </RevealAnimation>
+              <RevealAnimation>
+                <motion.p>
+                  Beyond frontend development, I'm exploring full-stack
+                  development with Next.js, Node.js, Express.js, and MongoDB,
+                  building projects that bring ideas to life from end to end.
+                </motion.p>
+              </RevealAnimation>
+              <RevealAnimation>
+                <motion.p>
+                  I believe great web app isn't just about how it looks - it's
+                  about how well it works.
+                </motion.p>
+              </RevealAnimation>
             </div>
             <div
               ref={bgRef}
